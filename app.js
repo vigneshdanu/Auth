@@ -1,7 +1,11 @@
 const express= require("express");  
+const User=require("./model/user");
+const router=express.Router();
+const verify= require("./middleware/verify");
 const mongoose =require("mongoose");
 const authRoute  =require('./routes/auth');
 const jwt = require("jsonwebtoken"); 
+const bcrypt=require('bcrypt');
 
 
 
